@@ -1,0 +1,178 @@
+/*General style*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: linear-gradient(linen, #946d73);
+  color: black;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  padding: 10px 0 40px 0;
+}
+
+h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/*STYLING image elements*/
+#img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  margin: 15px;
+}
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 60px;
+  height: 400px;
+}
+
+.img {
+  height: 400px;
+  width: 200px; 
+  max-width: 100%;
+  border-radius: 2%;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 20px;
+}
+
+#image {
+  height: auto;
+}
+
+button {
+  display: none;
+}
+
+/*Styling list*/
+ul {
+  margin: 40px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 60px;
+  grid-auto-rows: minmax(50px, auto);
+}
+
+li {
+  padding-bottom: 20px;
+  padding-left: 5px;
+  text-align: justify;
+  line-height: 30px;
+}
+
+li::before {
+  content: "🐾";
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: black;
+}
+
+/*Styling links, quote and footer*/
+a {
+  text-decoration: none;
+  color: #87062c;
+  font-style: italic;
+}
+
+blockquote,
+p {
+  font-family: "Charm", cursive;
+  text-align: center;
+}
+blockquote {
+  margin: 10px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  background-color: linen;
+  height: auto;
+}
+
+/*Hover mode just for screens larger than 1000px*/
+@media (min-width: 1000px) {
+  li:hover::before {
+    background-color: #946d73;
+    border: unset;
+  }
+}
+
+/*Smaller screens*/
+
+@media (max-width: 710px) {
+  .images {
+    position: relative;
+  }
+  .img {
+    display: none;
+    box-shadow: 2px 2px 5px #888888;
+    max-width: 200px;
+  }
+  .active {
+    position: absolute;
+    display: block;
+  }
+  button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+  }
+  #image {
+    height: 400px;
+  }
+  #button-next {
+    transform: translateX(-420%);
+  }
+  #button-previous {
+    transform: translateX(420%);
+  }
+}
+@media (max-width: 455px) {
+  ul {
+    display: block;
+  }
+
+  li,
+  footer {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+}
