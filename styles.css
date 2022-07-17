@@ -130,13 +130,9 @@ footer {
     position: relative;
   }
   .img {
-    display: none;
-    box-shadow: 2px 2px 5px #888888;
-    max-width: 200px;
-  }
-  .active {
     position: absolute;
-    display: block;
+    box-shadow: 2px 2px 5px #888888;
+    max-width: 80%;
   }
   button {
     display: block;
@@ -146,9 +142,6 @@ footer {
     background-color: transparent;
     border: none;
     font-size: 30px;
-  }
-  #image {
-    height: 400px;
   }
   #button-next {
     transform: translateX(-420%);
